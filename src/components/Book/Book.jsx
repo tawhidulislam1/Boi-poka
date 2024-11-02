@@ -15,7 +15,7 @@ const Book = ({ book }) => {
                     <div className="card-body">
                         <div className='flex justify-center gap-2'>
                             {
-                                tags.map(tag => <button class="btn btn-outline btn-xs btn-error">{tag}</button>)
+                                tags.map((tag, idx) => <button key={idx} className="btn btn-outline btn-xs btn-error">{tag}</button>)
                             }
                         </div>
                         <h2 className="card-title">
@@ -26,16 +26,16 @@ const Book = ({ book }) => {
                         <div className='border-t-2 border-dashed my-1'></div>
                         <div className="card-actions justify-between">
                             <div className="badge badge-outline">{category}</div>
-                            <div class="rating">
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <div className="rating">
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                                 <input
                                     type="radio"
                                     name="rating-2"
-                                    class="mask mask-star-2 bg-orange-400"
-                                    checked="checked" />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                    className="mask mask-star-2 bg-orange-400"
+                                    defaultChecked />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             </div>
                         </div>
                     </div>
